@@ -25,7 +25,7 @@ public class UserController {
 
     @GetMapping("/ifCheckInformation")
     public void ifCheckInformation(@RequestParam String email, @RequestParam String nationalId){
-        this.userService.ifCheckInformation(email,password);
+        this.userService.ifCheckInformation(email,nationalId);
     }
 
 }
