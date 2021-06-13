@@ -7,13 +7,14 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Entity
-@Table(name = "jobPosition")
+@Table(name = "position")
 @AllArgsConstructor
 @NoArgsConstructor
-public class JobPosition {
+public class Position {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,4 +29,7 @@ public class JobPosition {
 
     @Column(name = "cretedDate")
     private LocalDate createdDate;
+
+    //@OneToMany(mappedBy = "Position")
+    //private List<User> users;
 }
